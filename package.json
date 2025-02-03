@@ -2,7 +2,7 @@
   "name": "synonyms-client",
   "private": true,
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Rawaa Al-Kabbani",
   "scripts": {
     "dev": "vite",
