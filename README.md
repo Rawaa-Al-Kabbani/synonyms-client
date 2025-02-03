@@ -1,6 +1,8 @@
 # Synonyms app
 
-Backend: https://github.com/Rawaa-Al-Kabbani/synonyms-api
+API repository: https://github.com/Rawaa-Al-Kabbani/synonyms-api
+
+Live URL: https://synonyms-client-dvg0c4axhuheh4hw.swedencentral-01.azurewebsites.net/
 
 This is my implementation of the frontend for the Syonyms app. It is written in Typescript and React.js is used as the framework.
 
