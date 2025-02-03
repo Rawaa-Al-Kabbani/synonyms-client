@@ -57,7 +57,7 @@ export const SynonymSection: FunctionComponent<{ word: string; enableAdd: boolea
         <Stack justify="start" align="start" gap="30px" w="100%">
           {!enableAdd && (
             <Title order={2} style={{ alignSelf: 'center' }}>
-              Recent word
+              Synonyms
             </Title>
           )}
 

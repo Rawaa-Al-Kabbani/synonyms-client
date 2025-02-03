@@ -10,7 +10,6 @@
     "preview": "vite preview",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "eslint": "eslint",
     "graphql-codegen": "graphql-codegen",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

@@ -1,34 +1,69 @@
-# Mantine Vite template
+# Synonyms app
 
-## Features
+Backend: http://localhost:3000/graphql
 
-This template comes with the following features:
+This is my implementation of the frontend for the Syonyms app. It is written in Typescript and React.js is used as the framework.
 
-- [PostCSS](https://postcss.org/) with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Storybook](https://storybook.js.org/)
-- [Vitest](https://vitest.dev/) setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- ESLint setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
+When running the app via Docker Nginx is used to serve the static build files.
 
-## npm scripts
+You can create and search for existing synonyms.
 
-## Build and dev scripts
+## Requirements
 
-- `dev` – start development server
-- `build` – build production version of the app
-- `preview` – locally preview production build
+- Node.js and Yarn for running the app locally.
+  If you are using NVM you can install a compatible version from the `.nvmrc` file using `nvm use`
+- Docker for running the app via Docker
+- docker-compose for running the app via docker-compose
 
-### Testing scripts
+## How to run it using Docker
 
-- `typecheck` – checks TypeScript types
-- `lint` – runs ESLint
-- `prettier:check` – checks files with Prettier
-- `vitest` – runs vitest tests
-- `vitest:watch` – starts vitest watch
-- `test` – runs `vitest`, `prettier:check`, `lint` and `typecheck` scripts
+To run it using Docker:
 
-### Other scripts
+1. Ensure you have Docker installed on your system
+2. Build the Docker image using `docker build -t synonyms-app .`
+3. Start the container using `docker run -p 5173:80 -t synonyms-app`
+4. The app will be available on http://localhost:5173
 
-- `storybook` – starts storybook dev server
-- `storybook:build` – build production storybook bundle to `storybook-static`
-- `prettier:write` – formats all files with Prettier
+## How to run it using docker-compose
+
+To run it using docker-compose:
+
+1. Ensure you have Docker and docker-compose installed on your system
+2. Start the app using `docker-compose up`
+3. The app will be available on: http://localhost:5173
+
+## How to run formatting
+
+To run the formatting:
+
+1. Install the development dependencies using `yarn install`
+2. Run `yarn run format:check`
+
+## How to run linting
+
+To run the linting:
+
+1. Install the development dependencies using `yarn install`
+2. Run `yarn run lint`
+
+## How to run tests
+
+To run the tests:
+
+1. Install the development dependencies using `yarn install`
+2. Run `yarn run test`
+
+## How to run E2E tests
+
+To run the E2E tests:
+
+1. Install the development dependencies using `yarn install`
+2. Run `yarn run test:e2e`
+
+## To generate the GraphQL types
+
+To generate the GraphQL types:
+
+1. Install the dependencies using `yarn install`
+2. Ensure the backend is running, and that you have the correct schema URL configured in `codegen.ts`
+3. Run `yarn run graphql-codegen`

@@ -62,6 +62,24 @@ export const SearchInput: FunctionComponent = () => {
         />
       </Menu.Target>
 
+      {searchQuery && (
+        <Menu.Dropdown mah={150} style={{ overflowY: 'auto' }} data-testid="search_result_list">
+          {searchResults.length > 0 ? (
+            searchResults.map((item) => (
+              <Menu.Item
+                key={item.word}
+                onClick={() => onSelectSynonym(item.word)}
+                data-testid="search_result_item"
+              >
+                {item.word}
+              </Menu.Item>
+            ))
+          ) : (
+            <Menu.Label>No search results for {searchQuery}</Menu.Label>
+          )}
+        </Menu.Dropdown>
+      )}
+
       {searchResults.length > 0 && (
         <Menu.Dropdown mah={150} style={{ overflowY: 'auto' }} data-testid="search_result_list">
           {searchResults.map((item) => (
