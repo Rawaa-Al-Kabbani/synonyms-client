@@ -7,7 +7,7 @@ import {
   WhereSynonymInput,
 } from '@/graphql/graphql';
 
-export const API_BASE_URL =
+export const API_BASE_URL = import.meta.env.API_BASE_URL ??
   'https://synonyms-api-b0f0ggdcbxb0aub0.swedencentral-01.azurewebsites.net/graphql';
 
 const makeQuery = async (query: string, variables?: Record<string, any>) => {
