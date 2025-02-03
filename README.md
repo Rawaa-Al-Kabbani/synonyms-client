@@ -1,6 +1,6 @@
 # Synonyms app
 
-Backend: http://localhost:3000/graphql
+Backend: https://github.com/Rawaa-Al-Kabbani/synonyms-api
 
 This is my implementation of the frontend for the Syonyms app. It is written in Typescript and React.js is used as the framework.
 
